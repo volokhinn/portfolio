@@ -1,0 +1,21 @@
+.swiper-slide-next, .swiper-slide-prev{
+  opacity: 0.5 !important;
+  width: 80% !important;
+  transition: 1s;
+}
+
+.swiper-slide {
+  opacity: 0.1;
+  width: 60%;
+  transition: 1s;
+}
+
+.swiper-slide-active {
+  opacity: 1;
+  width: 100%;
+  transition: 1s;
+}
+
+.Typewriter__cursor {
+  display: none;
+}
