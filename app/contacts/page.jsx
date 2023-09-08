@@ -15,7 +15,7 @@ const ContactMe = () => {
     name: "${name}",
     email: "${mail}",
     message: "${msg}",
-    date: "Thu 21 Apr"
+    date: "${new Date().toDateString('')}"
   }
   
   button.addEventListener('click', () => {
@@ -57,7 +57,7 @@ const ContactMe = () => {
         <div className={`border-x-2 p-1 w-7`} style={{ borderColor: '#1E2D3D' }}></div>
         <div
           className={`py-5 px-10 overflow-y-scroll overflow-x-hidden scrollbar scrollbar-w-3 scrollbar-thumb-slate-500`}
-          style={{ height: '800px', width: '50%' }}>
+          style={{ height: '800px', width: '50%', overflowWrap: 'break-word', wordBreak: 'break-word' }}>
           <div className={`text-[#607B96]`}>{codeText(formText)}</div>
         </div>
       </div>

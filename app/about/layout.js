@@ -38,7 +38,7 @@ export default function RootLayout({ children, titleFile }) {
         <Contacts />
       </div>
       <div style={{ width: '50%' }}>
-        <div className={`flex-col`} style={{ width: '100%' }}>
+        <div className={`flex-col`}>
           <div style={{ color: '#607B96' }}>{children}</div>
         </div>
       </div>

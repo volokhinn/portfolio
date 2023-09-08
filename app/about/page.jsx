@@ -33,7 +33,7 @@ const About = () => {
         <FileHeader title="about" link="/" />
       </div>
       <div className="overflow-y-scroll scrollbar scrollbar-w-3 scrollbar-corner-white scrollbar-thumb-slate-500 scrollbar-track-transparent">
-        <div className="py-5 pl-4 pr-14" style={{ borderColor: '#1E2D3D', height: '750px' }}>
+        <div className="py-5 pl-4" style={{ borderColor: '#1E2D3D', height: '750px' }}>
           {codeText(text)}
         </div>
       </div>
