@@ -10,6 +10,7 @@ const FileHeader = ({ title, link }) => {
       {title}
       <Link href={'' + link}>
         <Image
+        alt="x"
           src={require('../../public/icons/x-markup.svg')}
           className={`cursor-pointer hover:bg-slate-700 transition p-1 w-5`}
         />

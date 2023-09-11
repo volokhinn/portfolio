@@ -30,7 +30,7 @@ const TheFooter = () => {
                 src={require('../public/icons/tg.svg')}
                 width={30}
                 height={100}
-                alt="vk"
+                alt="tg"
               />
             </Link>
           </div>
@@ -46,7 +46,7 @@ const TheFooter = () => {
               src={require('../public/icons/gh.svg')}
               width={30}
               height={100}
-              alt="vk"
+              alt="gh"
             />
           </Link>
         </div>

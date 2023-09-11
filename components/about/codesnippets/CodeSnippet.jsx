@@ -12,7 +12,7 @@ const CodeSnippet = ({ children, details, stars, created }) => {
       <div className="flex justify-between items-center mt-10">
         <div className="flex items-center gap-3">
           <div>
-            <Image src={require('../../../public/user.png')} />
+            <Image alt="user" src={require('../../../public/user.png')} />
           </div>
           <div className="flex-col">
             <div className="text-sm" style={{ color: '#5565E8' }}>
@@ -31,11 +31,11 @@ const CodeSnippet = ({ children, details, stars, created }) => {
               showDetails ? 'text-white' : 'text-[#607B96]'
             } hover:text-white transition cursor-pointer`}
             onClick={() => setShowDetails(!showDetails)}>
-            <Image src={require('../../../public/icons/comments.svg')} width={20} height={20} />
+            <Image alt="details" src={require('../../../public/icons/comments.svg')} width={20} height={20} />
             details
           </div>
           <div className="flex flex-row text-sm gap-2 items-center" style={{ color: '#607B96' }}>
-            <Image src={require('../../../public/icons/star.svg')} width={20} height={20} />
+            <Image alt='star' src={require('../../../public/icons/star.svg')} width={20} height={20} />
             {stars} stars
           </div>
         </div>
@@ -49,6 +49,7 @@ const CodeSnippet = ({ children, details, stars, created }) => {
         <div className="flex justify-between mt-4 border-t-2 border-[#1E2D3D] py-4 text-[#607B96]">
           {details}
           <Image
+            alt="x"
             className="p-1 hover:bg-slate-700 cursor-pointer"
             src={require('../../../public/icons/x-markup.svg')}
             width={20}

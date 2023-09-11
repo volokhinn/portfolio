@@ -2,7 +2,6 @@
 
 import Link from 'next/link';
 import Image from 'next/image';
-import { useRouter } from 'next/navigation';
 import Contacts from '@/components/about/Contacts';
 import CodeSnippet from '@/components/about/codesnippets/CodeSnippet';
 import ProfessionalFolders from '@/components/about/navigation/ProfessionalFolders';
@@ -13,23 +12,22 @@ export const metadata = {
 };
 
 export default function RootLayout({ children, titleFile }) {
-  const router = useRouter();
   return (
     <div className={`flex`}>
       <div className={`flex-col border-r-2 p-5 gap-y-8`} style={{ borderColor: '#1E2D3D' }}>
         <div className={`mb-7`}>
           <Link href="/professional" className={`opacity-100 hover:opacity-100 transition`}>
-            <Image src={require('../../public/icons/professional.svg')} width={40} height={40} />
+            <Image alt='Professional' src={require('../../public/icons/professional.svg')} width={40} height={40} />
           </Link>
         </div>
         <div className={`mb-7`}>
           <Link href="/about" className={`opacity-40 hover:opacity-100 transition`}>
-            <Image src={require('../../public/icons/personal.svg')} width={40} height={40} />
+            <Image alt='Personal' src={require('../../public/icons/personal.svg')} width={40} height={40} />
           </Link>
         </div>
         <div className={`mb-7`}>
           <Link href="/hobbies" className={`opacity-40 hover:opacity-100 transition`}>
-            <Image src={require('../../public/icons/hobbies.svg')} width={40} height={40} />
+            <Image alt='Hobbies' src={require('../../public/icons/hobbies.svg')} width={40} height={40} />
           </Link>
         </div>
       </div>

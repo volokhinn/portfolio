@@ -11,10 +11,11 @@ const Folder = ({ title, children, icon }) => {
         onClick={() => setExpand(!expand)}
         className={`flex gap-3 items-center cursor-pointer hover:bg-slate-800 transition px-4 py-1`}>
         <Image
+          alt='arrow'
           className={`${expand ? 'rotate-90' : 'rotate-0'} transition duration-75`}
           src={require('../../../public/icons/arrow-folder.svg')}
         />
-        <Image src={icon} width={20} height={20} />
+        <Image alt='folder' src={icon} width={20} height={20} />
         {title}
       </div>
       {expand && <div className={`ml-7 mt-1`}>{children}</div>}

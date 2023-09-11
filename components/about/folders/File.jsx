@@ -9,7 +9,7 @@ const File = ({ title, linkUrl }) => {
   const pathNavigation = currentPath + '/' + title;
   return (
     <Link href={'' + linkUrl} className={`flex gap-4 hover:bg-slate-800 transition px-4 py-1`}>
-      <Image src={require('../../../public/icons/file-icon.svg')} />
+      <Image alt="file" src={require('../../../public/icons/file-icon.svg')} />
       {title}
     </Link>
   );

@@ -5,8 +5,11 @@ import '@/public/styles/CodeSlider.css';
 import { codeText } from '@/Helpers/codeText';
 import SyntaxHighlighter from 'react-syntax-highlighter';
 import { paraisoDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
+import { sendMessage } from '../api/telegram';
+import { useRouter } from 'next/navigation';
 
 const ContactMe = () => {
+  const router = useRouter()
   const [name, setName] = useState('');
   const [mail, setMail] = useState('');
   const [msg, setMsg] = useState('');
@@ -24,6 +27,23 @@ const ContactMe = () => {
     form.send(message);
   })`;
 
+  const onSubmit = async e => {
+    e.preventDefault();
+    try {
+      const message = `Почта: ${mail};
+      Имя: ${name};
+      Сообщение: ${msg}.`;
+      await sendMessage(message);
+      router.push('/contacts/thanks');
+      setName('');
+      setMail('');
+      setMsg('');
+    }
+    catch {
+      console.log('Error', error)
+    }
+  };
+
   return (
     <>
       <div className="border-b-2" style={{ borderColor: '#1E2D3D' }}>
@@ -32,6 +52,7 @@ const ContactMe = () => {
       <div className={`flex`}>
         <div className="overflow-y-scroll scrollbar scrollbar-w-3 scrollbar-corner-white scrollbar-thumb-slate-500 scrollbar-track-transparent w-[50%]">
           <div className="py-20 px-32" style={{ borderColor: '#1E2D3D', height: '750px' }}>
+            <form onSubmit={onSubmit}>
             <p>_name:</p>
             <input
               onChange={(e) => setName(e.target.value)}
@@ -51,9 +72,10 @@ const ContactMe = () => {
               rows={10}
               className={`border-2 border-[#607B96] rounded-xl color-[#465E77] bg-[#011221] px-4 py-2 mt-3 mb-6 w-full resize-none`}
             />
-            <button className={`bg-[#1C2B3A] py-3 px-4 text-white rounded-xl`}>
+            <button type="submit" className={`bg-[#1C2B3A] py-3 px-4 text-white rounded-xl`}>
               submit-message
             </button>
+            </form>
           </div>
         </div>
         <div className={`border-x-2 p-1 w-7`} style={{ borderColor: '#1E2D3D' }}></div>

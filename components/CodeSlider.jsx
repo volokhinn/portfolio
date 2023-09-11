@@ -1,5 +1,4 @@
 import React, { useRef, useEffect, useState } from 'react';
-import Image from 'next/image';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/swiper-bundle.min.css';
 import '../public/styles/CodeSlider.css';

@@ -1,5 +1,4 @@
 'use client';
-import { useRouter } from 'next/navigation';
 import Contacts from '@/components/about/Contacts';
 import FindMe from '@/components/about/FindMe';
 import { codeText } from '@/Helpers/codeText';

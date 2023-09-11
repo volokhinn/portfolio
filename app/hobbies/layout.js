@@ -16,17 +16,17 @@ export default function RootLayout({ children }) {
       <div className={`flex-col border-r-2 p-5 gap-y-8`} style={{ borderColor: '#1E2D3D' }}>
         <div className={`mb-7`}>
           <Link href="/professional" className={`opacity-40 hover:opacity-100 transition`}>
-            <Image src={require('../../public/icons/professional.svg')} />
+            <Image alt='Professional' src={require('../../public/icons/professional.svg')} />
           </Link>
         </div>
         <div className={`mb-7`}>
           <Link href="/about" className={`opacity-40 hover:opacity-100 transition`}>
-            <Image src={require('../../public/icons/personal.svg')} />
+            <Image alt='Personal' src={require('../../public/icons/personal.svg')} />
           </Link>
         </div>
         <div className={`mb-7`}>
           <Link href="/hobbies" className={`opacity-1000 hover:opacity-100 transition`}>
-            <Image src={require('../../public/icons/hobbies.svg')} />
+            <Image alt='Hobbies' src={require('../../public/icons/hobbies.svg')} />
           </Link>
         </div>
       </div>
