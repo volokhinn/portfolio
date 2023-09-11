@@ -3,13 +3,22 @@ export const codeText = (text) => {
 
   let lineNumbers = [];
   for (let i = 1; i <= lines.length; i++) {
-    lineNumbers.push(i.toString().padStart(2, ' '))
+    lineNumbers.push(i);
   }
 
   return (newText = lines.map((line, index) => (
     <div key={index}>
-      <span style={{ marginRight: '20px', WebkitUserModify: 'read-write-plaintext-only' }}>{lineNumbers[index]}</span>
-      <span>{line}</span>
+      <div className={`flex`}>
+        <div
+          className={`flex justify-center`}
+          style={{
+            marginRight: '20px',
+            minWidth: '30px',
+          }}>
+          {lineNumbers[index]}
+        </div>
+        <div>{line}</div>
+      </div>
     </div>
   )));
 };

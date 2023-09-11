@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import FileHeader from '@/components/about/FileHeader';
 import '@/public/styles/CodeSlider.css';
 import { codeText } from '@/Helpers/codeText';
+import SyntaxHighlighter from 'react-syntax-highlighter';
+import { paraisoDark } from 'react-syntax-highlighter/dist/esm/styles/hljs';
 
 const ContactMe = () => {
   const [name, setName] = useState('');
@@ -57,7 +59,12 @@ const ContactMe = () => {
         <div className={`border-x-2 p-1 w-7`} style={{ borderColor: '#1E2D3D' }}></div>
         <div
           className={`py-5 px-10 overflow-y-scroll overflow-x-hidden scrollbar scrollbar-w-3 scrollbar-thumb-slate-500`}
-          style={{ height: '800px', width: '50%', overflowWrap: 'break-word', wordBreak: 'break-word' }}>
+          style={{
+            height: '800px',
+            width: '50%',
+            overflowWrap: 'break-word',
+            wordBreak: 'break-word',
+          }}>
           <div className={`text-[#607B96]`}>{codeText(formText)}</div>
         </div>
       </div>
