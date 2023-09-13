@@ -1,0 +1,29 @@
+[
+    {
+      "id": 1,
+      "title": "_weather_app",
+      "categories": ["html", "css", "js"],
+      "mainCategory": "react",
+      "description": "Описание проекта 1",
+      "image": "project_img.jpeg",
+      "link": "https://github.com/volokhinn/weatherApp"
+    },
+    {
+      "id": 2,
+      "title": "_pomodoro",
+      "categories": ["html", "react"],
+      "mainCategory": "react",
+      "description": "Описание проекта 2",
+      "image": "user.png",
+      "link": "https://github.com/volokhinn/pomodoro"
+    },
+    {
+        "id": 3,
+        "title": "_pomodoro",
+        "categories": ["html", "react"],
+        "mainCategory": "react",
+        "description": "Описание проекта 2",
+        "image": "user.png",
+        "link": "https://github.com/volokhinn/pomodoro"
+      }
+  ]
